@@ -16,6 +16,7 @@
                     <img src="images/logo-for-a-motorcycle-dealership--of-different-bra.png" alt="MotoShop Logo">
                 </div>
             </div>
+            <button class="hamburger">☰</button>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#inicio">Inicio</a></li>
@@ -279,6 +280,23 @@
             <p>&copy; 2025 MotoShop. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        // Pistas para el JavaScript:
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Opcional: cerrar al hacer clic en enlace
+        const navLinks = document.querySelectorAll('.nav-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
